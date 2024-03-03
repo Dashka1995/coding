@@ -1,0 +1,41 @@
+a {
+    color: rgb(51, 133, 133);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(212, 115, 154);
+}
+
+a:active {
+    color: blueviolet;
+}
+
+li {
+    color: rgb(30, 99, 76);
+    font-size: 15px;
+}
+
+li:hover {
+    color: rgb(212, 115, 154);
+}
+
+button  {
+    color: chocolate;
+}
+
+button:hover {
+    color: brown;
+}
+
+input:focus {
+    background-color: pink;
+}
+
+div p:nth-child(n + 3):nth-last-child(n + 2) {
+    color: rgb(184, 159, 234);
+}
+
+h1, h2 {
+    color: rgb(36, 36, 91);
+}

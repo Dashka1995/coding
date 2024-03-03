@@ -1,0 +1,22 @@
+html {
+    background-color: #a83088;
+}
+
+.header {
+    background-color: aquamarine;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: rgb(141, 161, 161);
+}
+
+.sect {
+    display: inline-block;
+    width: 25%;
+    background-color: rgb(255, 176, 222);
+    text-align: center;
+    color: rgb(244, 83, 137);
+}
+
+
+

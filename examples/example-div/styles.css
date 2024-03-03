@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.header1 {
+    height: 50px;
+    background-color: bisque;
+}
+
+.aside1 {
+    height: calc(100% - 50px);
+    width: 30%;
+    background-color: aqua;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right {
+    height: calc(100% - 50px);
+    width: 70%;
+    background-color: black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.top {
+    height: 50%;
+    width: 100%;
+    background-color: blueviolet;
+    display: inline block;
+}
+
+.bottom {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(116, 50, 131);
+    display: inline block;
+}

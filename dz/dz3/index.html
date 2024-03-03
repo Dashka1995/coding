@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма автомагазина</title>
+</head>
+<body>
+    <form action="https://fom.in.ua/echo" method="post" target="_blank">
+        <p><b>Регистрация</b></p>
+        <p>
+            <label for="user-email">Мыло*</label>
+            <input type="email" name="user-email" id="user-email" placeholder="введите мыло" required>       
+        </p>
+        <p>
+            <label for="user-password">Пароль*</label>
+            <input type="text" name="user-password" id="user-password" placeholder="не менее 4 символов" required>
+        </p>
+        <p>
+            <label for="remember-user">Запомнить меня</label>
+            <input type="checkbox" name="remember-user" id="remember-user" value="yes">
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+    <form action="https://fom.in.ua/echo" method="post" target="_blank">
+        <p><b>Форма подачи объявления</b></p>
+        <p>
+            <label for="headline">Ввод заголовка объявления*</label>
+            <input type="text" name="headline" id="headline" placeholder="не более 12 символов" required>       
+        </p>
+        <p>Тип коробки:
+            <label for="box-type-manual">Механика</label>
+            <input type="radio" name="box-type" id="box-type-manual" value="box-type-manual">   
+            <label for="box-type-automatic">Автомат</label>
+            <input type="radio" name="box-type" id="box-type-automatic" value="box-type-automatic">    
+        </p>
+        <p>
+            <label for="car-mileage">Пробег (в км)*</label>
+            <input type="number" step="2000" name="car-mileage" id="car-mileage" required>
+        </p>
+        <p>Состояние:
+            <label for="broken">Битая</label>
+            <input type="checkbox" name="car-condition" id="broken" value="broken">
+            <label for="on-credit">В кредите</label>
+            <input type="checkbox" name="car-condition" id="on-credit" value="on-credit">
+            <label for="no-mileage">без пробега</label>
+            <input type="checkbox" name="car-condition" id="no-mileage" value="no-mileage">
+        </p>
+        <p>
+            <label for="year-of-manufacture">Год выпуска</label>
+            <input type="date" name="year-of-manufacture" id="year-of-manufacture">
+        </p> 
+        <p>
+            <label for="color">Цвет:</label>
+            <select name="color" id="color">
+                <option value="white">Белый</option>
+                <option value="black">Черный</option>
+                <option value="grey">Серый</option>
+                <option value="red">Красный</option>
+                <option value="orange">Оранжевый</option>
+                <option value="yellow">Желтый</option>
+                <option value="green">Зеленый</option>
+                <option value="blue">Синий</option>
+                <option value="violet">Фиолетовый</option>
+            </select>
+        </p>
+        <p>Тип топлива:
+            <label for="fuel-type-petrol">Бензин</label>
+            <input type="radio" name="fuel-type" id="fuel-type-petrol" value="fuel-type-petrol">   
+            <label for="fuel-type-diesel">Дизель</label>
+            <input type="radio" name="fuel-type" id="fuel-type-diesel" value="fuel-type-diesel">
+            <label for="fuel-type-gas">Газ</label>
+            <input type="radio" name="fuel-type" id="fuel-type-gas" value="fuel-type-gas">    
+        </p>
+        <p>Поле для комментариев:
+            <br>
+            <label for="comment"></label>
+            <textarea name="user-comment" id="comment" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+</body>
+</html>

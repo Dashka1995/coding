@@ -1,0 +1,13 @@
+https://maketext.io/    - для создания иконок
+https://getbootstrap.com/ - библиотека стилей CSS
+https://bootstrapshuffle.com/ - еще библиотека
+https://picsum.photos/  - сервис бесплатных изображений
+https://favicon.io/ - cервис для создания иконок favicon
+https://caniuse.com/ - сервис для проверки элементов кода на возможность использования для разных браузеров
+https://developer.mozilla.org/en-US/ - сервис для поиска ответов по хер знает чему
+https://www.w3schools.com/ - сервис для поиска ответов по хер знает чему
+https://fonts.google.com/ - шрифты
+https://transfonter.org/ - сервис для конвертации шрифтов
+https://www.figma.com/ - сервис для работы с макетами
+https://meyerweb.com/eric/tools/css/reset/ - Reset.css 
+https://necolas.github.io/normalize.css/ - Normalize.css 

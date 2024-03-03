@@ -1,0 +1,67 @@
+git init [название проекта]<!--создать локальный репозиторий в текущей папке-->
+
+git clone [url-адрес]<!--Скачивает репозиторий вместе со всей его историей изменений-->
+
+git status<!--Перечисляет все новые или изменённые файлы, которые нуждаются в фиксации-->
+
+git add файл<!--Индексирует указанный файл для последующего коммита-->
+
+git add .<!--добавить всё в репозиторий-->
+
+git commit -m "сообщение с описанием" <!--Фиксирует проиндексированные изменения и сохраняет их в историю версий-->
+
+git reset файл<!--Отменяет индексацию указанного файла, при этом сохраняет его содержимое-->
+
+git reset --hard<!--откатывает всё к последнему комиту-->
+
+git diff --staged<!--Показывает различия между проиндексированной и последней зафиксированной версиями файлов-->
+
+git branch<!--Список именованных веток коммитов с указанием выбранной ветки-->
+
+git branch название-ветки<!--Создаёт новую ветку-->
+
+git branch -d название-ветки<!--удаляет нужную ветку-->
+
+git checkout -b название-ветки<!--Создаёт новую ветку и переходит в неё-->
+
+git checkout название-ветки<!--переключение на нужную ветку-->
+
+git checkout хеш-коммита<!--переключение на нужный коммит-->
+git checkout -b название-ветки<!--Создаёт новую ветку с нужного коммита и переходит в неё-->
+
+git merge название-ветки<!--слияние нужной ветки с той, в которой мы находимся-->
+
+git pull origin master<!--слияние ветки master из удаленного репозитория с той, в которой мы находимся-->
+
+git remote add origin https://github.com/Dashka1995/hillel-dz.git
+
+сделал
+добавил (git add .)
+закомитил (git commit -m "add images")
+отправил в удаленный репозиторий(git push origin hillel-dz)
+
+
+
+
+
+…or create a new repository on the command line
+echo "# coding" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Dashka1995/coding.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/Dashka1995/coding.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+
+
+
+
+git<!---->

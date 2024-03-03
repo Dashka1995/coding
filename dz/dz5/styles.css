@@ -1,0 +1,45 @@
+nav a {
+    color: green;
+    font-size: 20px;
+}
+
+nav a[href$="cont"] {
+    text-transform: uppercase;
+}
+
+.card-title {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
+
+.card-img {
+    border-radius: 20px;
+}
+
+.rating {
+    color: green;
+    font-size: 18px;
+}
+[id="cont"] {
+    color: green;
+    text-align: right;
+    text-decoration: underline;
+}
+
+address a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+address a[href^="tel"] {
+    color: rgb(9, 50, 9) ;
+}
+
+address a[href^="mail"] {
+    color: rgb(165, 18, 108) ;
+}
+
+footer p {
+    font-size: 40px;
+}
