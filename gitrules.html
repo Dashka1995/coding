@@ -1,6 +1,6 @@
-git init [название проекта]<!--создать локальный репозиторий в текущей папке-->
+git init название проекта<!--создать локальный репозиторий в текущей папке-->
 
-git clone [url-адрес]<!--Скачивает репозиторий вместе со всей его историей изменений-->
+git clone url-адрес<!--Скачивает репозиторий вместе со всей его историей изменений-->
 
 git status<!--Перечисляет все новые или изменённые файлы, которые нуждаются в фиксации-->
 
@@ -31,37 +31,34 @@ git checkout -b название-ветки<!--Создаёт новую вет�
 
 git merge название-ветки<!--слияние нужной ветки с той, в которой мы находимся-->
 
-git pull origin master<!--слияние ветки master из удаленного репозитория с той, в которой мы находимся-->
+git pull origin master<!--слияние ветки master из удаленного репозитория с той веткой локальногорепозитория, в которой мы находимся-->
 
-git remote add origin https://github.com/Dashka1995/hillel-dz.git
+git remote add origin https://github.com/Dashka1995/coding.git
 
 сделал
 добавил (git add .)
-закомитил (git commit -m "add images")
-отправил в удаленный репозиторий(git push origin hillel-dz)
+закомитил (git commit -m "...")
+отправил в удаленный репозиторий в главную ветку(git push -u origin master)
+или
+отправил в удаленный репозиторий в новую второстепенную ветку(git push -u origin dz9)
 
 
 
 
-
-…or create a new repository on the command line
-echo "# coding" >> README.md
+…or create a new repository on the command line:
 git init
-git add README.md
+git add .
 git commit -m "first commit"
-git branch -M main
 git remote add origin https://github.com/Dashka1995/coding.git
-git push -u origin main
-…or push an existing repository from the command line
+git push -u origin master
+
+…or push an existing repository from the command line:
 git remote add origin https://github.com/Dashka1995/coding.git
-git branch -M main
-git push -u origin main
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+git push -u origin master
 
 
 
-
+проверочка на дом
 
 
 git<!---->
