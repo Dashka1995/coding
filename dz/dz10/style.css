@@ -4,8 +4,6 @@
 
 section {
     width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -19,16 +17,11 @@ section {
     background-color: #E6E6E6;
 }
 
-.float-box-top {
+.float-box-large {
     width: 200px;
     height: 200px;
     background-color: #FC8F8F;
-    float: left;
     padding-top: 62.5px;
-}
-
-.float-box-top:last-child {
-    float: right;
 }
 
 .clearfix::after {
@@ -44,7 +37,7 @@ p {
     color: #FFFFFF;
 }
 
-.p-top {
+.p-large {
     font-size: 64px;
     line-height: 75px;
 }
@@ -54,24 +47,26 @@ p {
     margin-bottom: 50px;
 }
 
-.div-right {
-    float: right;
-}
-
-.float-box-middle {
+.float-box-small {
     width: 100px;
     height: 100px;
     background-color: #FC8F8F;
-    float: left;
     padding-top: 29px;
-    margin-right: 10px;
 }
 
-.float-box-middle:last-child {
-    margin-right: 0px;
-}
-
-.p-middle {
+.p-small {
     font-size: 36px;
     line-height: 42px;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.margin-right {
+    margin-right: 15px;
 }
