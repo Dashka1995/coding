@@ -24,7 +24,7 @@ section {
     height: 200px;
     background-color: #FC8F8F;
     float: left;
-    padding-top: 6.3%;
+    padding-top: 62.5px;
 }
 
 .float-box-top:last-child {
@@ -37,16 +37,41 @@ section {
     clear: both;
 }
 
-.p-top {
+p {
     font-family: Roboto, sans-serif;
-    font-size: 64px;
     font-weight: 700;
-    line-height: 75px;
     text-align: center;
     color: #FFFFFF;
+}
+
+.p-top {
+    font-size: 64px;
+    line-height: 75px;
 }
 
 .middle-cont {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.div-right {
+    float: right;
+}
+
+.float-box-middle {
+    width: 100px;
+    height: 100px;
+    background-color: #FC8F8F;
+    float: left;
+    padding-top: 29px;
+    margin-right: 10px;
+}
+
+.float-box-middle:last-child {
+    margin-right: 0px;
+}
+
+.p-middle {
+    font-size: 36px;
+    line-height: 42px;
 }
