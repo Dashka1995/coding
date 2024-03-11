@@ -1,3 +1,52 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-family: Gilroy, sans-serif; 
+}
+.wrapper {
+    width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    background-color: aqua;
+}
+
+.flex-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-cont:nth-child(2) {
+    width: 300px;
+    justify-content: space-between;
+}
+
+.logo-tel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    text-decoration: none;
+    color: #000000;
+}
+
+.righter {
+    text-decoration: none;
+}
+
+.righter:last-child {
+    margin-left: 14px;
+}
+
+header {
+    background-color: blueviolet;
+    padding-top: 33px;
+}
