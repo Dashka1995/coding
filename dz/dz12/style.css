@@ -15,15 +15,17 @@ body {
     background-color: aqua;
 }
 
-.flex-cont {
+.flex {
     display: flex;
+}
+
+.logo-cont {
     justify-content: space-between;
     align-items: center;
 }
 
-.flex-cont:nth-child(2) {
+.logo-cont:nth-child(2) {
     width: 300px;
-    justify-content: space-between;
 }
 
 .logo-tel {
@@ -50,3 +52,30 @@ header {
     background-color: blueviolet;
     padding-top: 33px;
 }
+
+.nav-cont {
+    background-color: azure;
+    display: flex;
+}
+
+.nav-cont a {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    text-decoration: none;
+    color: #4F4F4F;
+}
+
+.pseudo::after {
+    content: url(./images/стрелка\ кнопки.png);
+    width: 15px;
+    height: 15px;
+}
+
+.nav-cont form {
+    margin-left: auto;
+} 
+
+
+
