@@ -5,14 +5,16 @@
 body {
     font-family: Gilroy, sans-serif; 
 }
+
 .wrapper {
     width: 1320px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.logo {
-    background-color: aqua;
+.logo-a {
+    height: 45px;
+    margin-bottom: 60px;
 }
 
 .flex {
@@ -49,14 +51,16 @@ body {
 }
 
 header {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     padding-top: 33px;
 }
 
 .nav-cont {
-    background-color: azure;
+    /* background-color: azure; */
     display: flex;
 }
+
+
 
 .nav-cont a {
     font-size: 18px;
@@ -65,10 +69,16 @@ header {
     text-align: left;
     text-decoration: none;
     color: #4F4F4F;
+    margin-left: 40px;
+}
+
+.nav-cont a:first-of-type {
+    margin-left: 0px;
 }
 
 .pseudo::after {
     content: url(./images/стрелка\ кнопки.png);
+    margin-left: 8px;
     width: 15px;
     height: 15px;
 }
@@ -77,5 +87,26 @@ header {
     margin-left: auto;
 } 
 
+.nav-cont input {
+    width: 345px;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid #BDBDBD;
+    background: url(./images/Search.png) #F9F9F9 293px 15px no-repeat;
+    background-size: 30px 30px;
+    margin-bottom: 30px;
+}
 
+.nav-cont input img {
+    width: 50%;
+}
 
+.nav-cont input::placeholder {
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    margin-left: 20px;
+    color: #828282;
+}
