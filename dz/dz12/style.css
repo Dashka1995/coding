@@ -14,7 +14,6 @@ body {
 
 .logo-a {
     height: 45px;
-    margin-bottom: 60px;
 }
 
 .flex {
@@ -22,12 +21,16 @@ body {
 }
 
 .logo-cont {
+    height: 45px;
     justify-content: space-between;
-    align-items: center;
 }
 
 .logo-cont:nth-child(2) {
     width: 300px;
+}
+
+.logo-right {
+    align-items: center;
 }
 
 .logo-tel {
@@ -51,16 +54,13 @@ body {
 }
 
 header {
-    /* background-color: blueviolet; */
-    padding-top: 33px;
+    height: 204px;
+    padding-top: 23px;
 }
 
 .nav-cont {
-    /* background-color: azure; */
-    display: flex;
+    margin-top: 60px;
 }
-
-
 
 .nav-cont a {
     font-size: 18px;
@@ -92,7 +92,6 @@ header {
     border: 1px solid #BDBDBD;
     background: url(./images/Search.png) #F9F9F9 293px 15px no-repeat;
     background-size: 30px 30px;
-    margin-bottom: 30px;
 }
 
 .nav-cont input::placeholder {
@@ -106,7 +105,8 @@ header {
 }
 
 main {
-    background: -moz-radial-gradient();
+    background-color: #F9F9F9;
+    padding-top: 76px;
 }
 
 .breadcrumbs a {
@@ -128,7 +128,7 @@ main {
 
 .back {
     margin-top: 40px;
-    /* background-color: #828282; */
+    background-color: #828282;
 }
 
 .back a {
@@ -144,4 +144,19 @@ main {
     content: url(./images/back-green.png);
 }
 
+.card-box {
+    /* background-color: aqua; */
+    padding-top: 44px;
+}
 
+.card {
+    width: 315px;
+    height: 566px;
+    border-radius: 20px;
+    border: 1px solid #F2F2F2;
+    background-color: #F9F9F9;
+}
+
+
+
+/*ЖОПА С ВЕРТИКАЛЬНЫМИ ОТСТУПАМИ В ХЕДЕРЕ*/
