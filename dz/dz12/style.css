@@ -55,11 +55,11 @@ body {
 
 header {
     height: 204px;
-    padding-top: 23px;
+    padding-top: 33px;
 }
 
 .nav-cont {
-    margin-top: 60px;
+    margin-top: 44px;
 }
 
 .nav-cont a {
@@ -70,6 +70,7 @@ header {
     text-decoration: none;
     color: #4F4F4F;
     margin-left: 40px;
+    align-items: center;
 }
 
 .nav-cont a:first-of-type {
@@ -106,6 +107,7 @@ header {
 
 main {
     background-color: #F9F9F9;
+    /* background-color: aqua; */
     padding-top: 76px;
 }
 
@@ -127,8 +129,7 @@ main {
 }
 
 .back {
-    margin-top: 40px;
-    background-color: #828282;
+    margin-top: 30px;
 }
 
 .back a {
@@ -145,7 +146,6 @@ main {
 }
 
 .card-box {
-    /* background-color: aqua; */
     padding-top: 44px;
 }
 
