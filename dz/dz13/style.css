@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-bottom: 0px;
+    font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrapper {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+}
+
+a:active, button:active {
+    color: #5271ff;
+    text-decoration: underline;
+}
+
+nav a {
+    display: flex;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #4F4F4F;
+    margin-left: 40px;
+    align-items: center;
+}
+
+nav a:nth-child(1) {
+    margin-left: 0px;
+}
+
+nav a:nth-child(4) {
+    margin-left: auto;
+}
+
+.logo-long {
+    height: 150px;
+}
+
+.logo-long a {
+    height: inherit;
+}
+
+aside {
+    padding-top:5px;
+    width: 60px;
+    height: inherit;
+    flex-direction: column;
+    background-color: white;
+}
+
+main {
+    background-color: #EEEFF1;
+}
+
+aside button {
+    width: 60px;
+    height: 50px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #4F4F4F;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+aside button img {
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.advertising-cont a img {
+    border-radius: 10px;
+}
+
+.left-block {
+    margin-top: 20px;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+/*  font-weight: bold;
+    font-weight: normal;
+    color: #5271ff; */
