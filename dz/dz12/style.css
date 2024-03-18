@@ -33,10 +33,9 @@ body {
     align-items: center;
 }
 
-.logo-tel {
-    display: flex;
+.tel-cont {
     align-items: center;
-    gap: 10px;
+    column-gap: 10px;
     font-size: 18px;
     font-weight: 400;
     line-height: 21px;
@@ -283,8 +282,13 @@ footer {
     padding-bottom: 130px;
 }
 
+.contacts-left, .contacts-right {
+    justify-content: space-between;
+    width: 660px;
+}
+
 .payment-delivery {
-    column-gap: 20px;
+    column-gap: 50px;
 }
 
 .payment-delivery a {
@@ -294,3 +298,17 @@ footer {
     line-height: 21px;
     color: #FFFFFF;
 }
+
+.contacts-left {
+    padding-right: 10px;
+}
+
+.contacts-right {
+    padding-left: 10px;
+}
+
+footer .tel-cont {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
