@@ -5,6 +5,7 @@
 body {
     margin-bottom: 0px;
     font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
+    /* font-family: Roboto, sans-serif; */
 }
 
 .flex {
@@ -15,6 +16,10 @@ body {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.grey {
+    background-color: #EEEFF1;
 }
 
 a:hover, button:hover {
@@ -41,6 +46,10 @@ nav a:nth-child(1) {
     margin-left: 0px;
 }
 
+nav a:nth-child(1) img {
+    margin-right: 5px;
+}
+
 nav a:nth-child(4) {
     margin-left: auto;
 }
@@ -54,15 +63,13 @@ nav a:nth-child(4) {
 }
 
 aside {
+    margin-top: 20px;
+    border-radius: 10px;
     padding-top:5px;
     width: 60px;
     height: inherit;
     flex-direction: column;
     background-color: white;
-}
-
-main {
-    background-color: #EEEFF1;
 }
 
 aside button {
@@ -85,10 +92,6 @@ aside button img {
     object-fit: cover;
 }
 
-.advertising-cont a img {
-    border-radius: 10px;
-}
-
 .left-block {
     margin-top: 20px;
     margin-left: auto;
@@ -98,6 +101,9 @@ aside button img {
 
 
 
+.advertising-cont a img {
+    border-radius: 10px;
+}
 
 
 
@@ -106,4 +112,5 @@ aside button img {
 
 /*  font-weight: bold;
     font-weight: normal;
-    color: #5271ff; */
+    color: #5271ff;
+    background-color: #EEEFF1; */

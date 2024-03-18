@@ -6,13 +6,14 @@
     <title>Dz12</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./fonts/font-gilroy.css">
+    <link rel="stylesheet" href="./fonts/font-roboto.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <div class="wrapper flex logo-cont">
             <a class="logo-a" href="/">
-                <img src="./images/лого.png" alt="logo" width="244" height="45">
+                <img src="./images/logo.png" alt="logo" width="244" height="45">
             </a>
             <div class="flex logo-right logo-cont" >
                 <p>
@@ -26,7 +27,7 @@
                         <img src="./images/header-buy.png" alt="Корзина" width="30" height="30">
                     </a>
                     <a class="righter" href="/">
-                        <img src="./images/аккаунт.png" alt="Аккаунт" width="30" height="30">
+                        <img src="./images/account.png" alt="Аккаунт" width="30" height="30">
                     </a>
                 </div>
             </div>
@@ -42,18 +43,13 @@
         </nav>
     </header>
     <main>
-        <div class="breadcrumbs wrapper pseudo-ellipse">
+        <div class="breadcrumbs wrapper pseudo-ellipse flex">
             <a href="/">Каталог</a>
             <a href="/">Готовые миксы</a>
         </div>
         <div class="back wrapper">
             <a href="/">Назад</a>
         </div>
-
-
-
-
-
         <div class="card-box wrapper flex">
             <div class="card">
                 <img class="card-photo" src="./images/card-photo.png" alt="card-photo" width="275" height="227">
@@ -198,11 +194,26 @@
                         <img src="./images/card-buy.png" alt="Корзина" width="27" height="27">
                     </button>
                 </div>
+            </div>    
+        </div>
+        <div class="slider wrapper flex">
+            <a class="pseudo-arrow-left" href="/"></a>
+            <div class="slider-numbers flex">
+                <a class="active" href="/">1</a>
+                <a href="/">2</a>
+                <a href="/">3</a>     
             </div>
-            
+            <a class="pseudo-arrow-right" href="/"></a>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="wrapper flex">
+            <div class="payment-delivery flex">
+                <a href="">Оплата</a>
+                <a href="">Доставка</a>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

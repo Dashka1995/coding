@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Gilroy, sans-serif; 
+    font-family: 'Gilroy', sans-serif; 
 }
 
 .wrapper {
@@ -76,7 +76,7 @@ header {
 }
 
 .pseudo::after {
-    content: url(./images/стрелка\ кнопки.png);
+    content: url(./images/arrow-down.png);
     margin-left: 8px;
 }
 
@@ -89,12 +89,12 @@ header {
     height: 54px;
     border-radius: 10px;
     border: 1px solid #BDBDBD;
-    background: url(./images/Search.png) #F9F9F9 293px 15px no-repeat;
+    background: url(./images/search.png) #F9F9F9 293px 15px no-repeat;
     background-size: 30px 30px;
 }
 
 .nav-cont input::placeholder {
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 21px;
@@ -104,8 +104,12 @@ header {
 
 main {
     background-color: #F9F9F9;
-    /* background-color: aqua; */
     padding-top: 76px;
+    padding-bottom: 95px;
+}
+
+.breadcrumbs {
+    column-gap: 10px;
 }
 
 .breadcrumbs a {
@@ -114,11 +118,10 @@ main {
     line-height: 21px;
     color: #BDBDBD;
     text-decoration: none;
-    margin-right: 10px;
 }
 
 .pseudo-ellipse a:nth-child(n + 1):nth-last-child(n + 2)::after {
-    content: url(./images/Ellipse\ 15.png);
+    content: url(./images/ellipse.png);
     margin-left: 15px;
 }
 
@@ -195,7 +198,7 @@ main {
 
 .volume-box button {
     flex-grow: 1;
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 21px;
@@ -221,7 +224,7 @@ main {
     height: 45px;
     border-radius: 10px;
     border: 1px solid #05AF3487;
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 21px;
@@ -238,4 +241,56 @@ main {
 
 .card-basket-box button:active {
     border: 1px solid #05AF3487;
+}
+
+.slider {
+    padding-top: 50px;
+    justify-content: center;
+    gap:25px;
+    align-items: center;
+}
+
+.slider a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #828282;
+}
+
+.slider-numbers {
+    padding-bottom: 3px;
+    column-gap: 20px;
+}
+
+.slider-numbers .active {
+    font-weight: 700;
+    color: #219653;
+}
+
+.pseudo-arrow-left::after {
+    content: url(./images/arrow-left.png);
+}
+
+.pseudo-arrow-right::after {
+    content: url(./images/arrow-right.png);
+}
+
+footer {
+    background-color: #333333;
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
+.payment-delivery {
+    column-gap: 20px;
+}
+
+.payment-delivery a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #FFFFFF;
 }
