@@ -3,6 +3,7 @@
 }
 
 body {
+    background-color: #f2f2f2;
     margin-bottom: 0px;
     font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
     /* font-family: Roboto, sans-serif; */
@@ -13,13 +14,13 @@ body {
 }
 
 .wrapper {
-    width: 1200px;
+    width: 1150px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.grey {
-    background-color: #EEEFF1;
+.dark-grey {
+    background-color: #1a1a1a;
 }
 
 a:hover {
@@ -36,9 +37,13 @@ button:hover {
 }
 
 button:active img {
-    border: 2px solid greenyellow;
+    border: 3px solid #52ebff;
 }
 
+.logo-top {
+    margin-left: 5px;
+    width: fit-content;
+}
 
 nav a {
     display: flex;
@@ -46,20 +51,17 @@ nav a {
     font-size: 16px;
     line-height: 21px;
     text-decoration: none;
-    color: #4F4F4F;
-    margin-left: 40px;
+    color: white;
     align-items: center;
+    margin-left: 40px;
 }
 
-nav a:nth-child(1) {
-    margin-left: 0px;
+nav a:first-child {
+    margin-left: 1px;
 }
 
-nav a:nth-child(1) img {
-    margin-right: 5px;
-}
 
-nav a:nth-child(4) {
+nav a:nth-child(3) {
     margin-left: auto;
 }
 
@@ -68,26 +70,29 @@ nav a:nth-child(4) {
 }
 
 .logo-long a {
+    display: inline-block;
     height: inherit;
 }
 
 main {
-    padding-top: 15px;
+    padding-top: 10px;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .aside-left {
     border-radius: 10px;
-    padding-top:5px;
-    width: 60px;
+    width: 65px;
     height: inherit;
     flex-direction: column;
-    background-color: white;
+    background-color: transparent;
 }
 
 aside button {
-    width: 60px;
-    height: 50px;
-    margin-bottom: 8px;
+    width: 65px;
+    height: 60px;
     font-size: 18px;
     font-weight: 500;
     line-height: 21px;
@@ -104,14 +109,9 @@ aside button img {
     object-fit: cover;
 }
 
-/* .left-block {
-    margin-left: auto;
-    justify-content: flex-end;
-} */
-
 .aside-right {
+    width: 200px;
     margin-left: auto;
-    flex-direction: column;
     row-gap: 10px;
 }
 
@@ -124,6 +124,8 @@ aside button img {
 }
 
 .advertising-card a {
+    display: inline-block;
+    height: inherit;
     color: #5271ff;
     font-size: 22px;
     font-weight: bold;
@@ -145,6 +147,21 @@ aside button img {
     background-image: url(./images/advertisement-calliti-img.jpg);
 }
 
+.post-block {
+    width: 1084px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-a {
+    width: inherit;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.post-a img {
+
+}
 
 
 /*  font-weight: bold;
