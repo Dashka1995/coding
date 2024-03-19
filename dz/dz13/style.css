@@ -9,6 +9,10 @@ body {
     /* font-family: Roboto, sans-serif; */
 }
 
+img {
+    display: block;
+}
+
 .flex {
     display: flex;
 }
@@ -32,21 +36,23 @@ a:active {
     text-decoration: underline;
 }
 
-button:hover {
+/* button:hover {
     border: white;
-}
+} */
 
 button:active img {
-    border: 3px solid #52ebff;
+    border: 3px solid white;
 }
 
-.logo-top {
-    margin-left: 5px;
-    width: fit-content;
+nav, main {
+    padding: 20px 60px;
+}
+
+main {
+    column-gap: 10px;
 }
 
 nav a {
-    display: flex;
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
@@ -57,7 +63,7 @@ nav a {
 }
 
 nav a:first-child {
-    margin-left: 1px;
+    margin-left: 0px;
 }
 
 
@@ -66,16 +72,7 @@ nav a:nth-child(3) {
 }
 
 .logo-long {
-    height: 150px;
-}
-
-.logo-long a {
-    display: inline-block;
-    height: inherit;
-}
-
-main {
-    padding-top: 10px;
+    height: fit-content;
 }
 
 .column {
@@ -84,29 +81,22 @@ main {
 
 .aside-left {
     border-radius: 10px;
-    width: 65px;
+    width: fit-content;
     height: inherit;
-    flex-direction: column;
     background-color: transparent;
+    row-gap: 10px;
 }
 
 aside button {
-    width: 65px;
-    height: 60px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 21px;
-    color: #4F4F4F;
+    width: fit-content;
+    height: fit-content;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid transparent;
 }
 
 aside button img {
-    border-radius: 10px;
-    width: 100%;
-    display: block;
-    object-fit: cover;
+    border-radius: inherit;
 }
 
 .aside-right {
@@ -148,19 +138,16 @@ aside button img {
 }
 
 .post-block {
-    width: 1084px;
+    flex-grow: 1;
     margin-left: auto;
     margin-right: auto;
+    row-gap: 10px;
 }
 
 .post-a {
     width: inherit;
     background-color: white;
     border-radius: 10px;
-}
-
-.post-a img {
-
 }
 
 
