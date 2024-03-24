@@ -184,7 +184,7 @@ aside button img {
     width: inherit;
     height: inherit;
     border-radius: 10px;
-    border: 2px dashed; 
+    border: 2px dashed #1a1a1a; 
     object-fit: cover;
     object-position: center;
 }
