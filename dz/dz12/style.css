@@ -282,10 +282,19 @@ footer {
     padding-bottom: 130px;
 }
 
-.contacts-left, .contacts-right {
-    justify-content: space-between;
-    width: 660px;
+.contacts div {
+    width: 33%;
+    flex-grow: 1;
 }
+
+.contacts-center {
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.contacts-right {
+    justify-content: flex-end;
+} 
 
 .payment-delivery {
     column-gap: 50px;
