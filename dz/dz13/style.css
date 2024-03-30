@@ -1,57 +1,46 @@
-* {
-    box-sizing: border-box;
-}
+@import url(./reset.css);
 
-body {
-    margin: 0px;
-}
-
-nav {
-    background-color: plum;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 10px;
-    padding: 5px;
-}
-
-object a {
-    margin-right: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav a object a span:nth-of-type(2) {
-    margin-right: 4px;
-}
-
-.drop-down {
+.relative {
     position: relative;
 }
 
-.drop-down-div-1 {
-    display: block;
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(40, 33, 47);
+}
+
+body {
+    background-color: rgb(195, 186, 174);
+}
+
+nav {
+    background-color: rgb(200, 240, 242);
+}
+
+.drop-down-div {
     position: absolute;
-    background-color: plum;
-    color: #ffffff;
-    top: 23px;
-    right: 0;
+    display: none;
+    background-color: rgb(200, 240, 242);
+
+}
+
+.products-div {
     left: 0;
+    right: 0;
 }
 
-.drop-down:hover {
-    background-color: powderblue;
-}
-
-.drop-down:hover .drop-down-div-1 {
+.products-a:hover .products-div {
     display: block;
-    background-color: powderblue;
 }
 
-hr {
-    margin-top: 0px;
-    border: 2px solid powderblue;
+.product2-a:hover .product2-div {
+    display: block;
 }
