@@ -14,3 +14,6 @@ https://necolas.github.io/normalize.css/ - Normalize.css
 https://codepen.io/enxaneta/full/adLPwv - Flexbox Playground
 https://githowto.com/ru/setup - тренажер по Git
 https://thomaspark.co/ - блог с разными тренажерами
+https://sass-lang.com/ - препроцессор SASS
+https://lesscss.org/ - препроцессор LESS
+https://stylus-lang.com/ - препроцессор Stylus

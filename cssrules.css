@@ -579,6 +579,20 @@ div {
 }
 
 
+/* градиенты: */
+.text-gradient {
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    background-clip: text;
+    color: transparent;
+}
+
+/* тени: */
+.shadow {
+    box-shadow: 0px 15px 80px 0px rgba(40, 40, 86, 0.5);
+}
+
+
+
 
 /* флексы:  */
 
@@ -991,6 +1005,14 @@ pending — состояние ожидания, например, перед с
 
 
 
+
+
+
+
+
+
+
+
 работа с проэктом::
 1)подключение Normalize.css или Reset.css
 
@@ -1004,11 +1026,7 @@ pending — состояние ожидания, например, перед с
     margin-right: auto;
 }
 
-5)создание header
 
-6)создание main, разбитое на section, разбитые на div
-
-7)создание footer
 
 
 
@@ -1020,6 +1038,12 @@ pending — состояние ожидания, например, перед с
 -вписываем картинку в бэкграунд - background-size: cover; или background-size: contain;
 -при использовании background-image всегда на всякий пожарный добавляем и background-color на случай, если картинка не загрузится
 -кнопкам и ссылкам в виде кнопок добавлять свойство инлайн блок и центрировать текст в них с помощью line-height:(=height);
+
+
+
+
+
+
 
 
 

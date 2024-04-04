@@ -1,0 +1,102 @@
+скачать пакет SASS(для комплиляции):
+прописать в любом терминале(при наличии node.js):
+npm install -g sass
+
+создаем scss-файл(style.scss)
+компиляция (в терминале):
+sass style.scss style.css
+    или
+в проэкте создаем папку c scss-файлами "scss"
+компиляция (в терминале):
+sass scss:css 
+    или(чтобы не прописывать при каждом сохранении в терминале sass scss:css )
+sass --watch scss:css
+
+синтаксис css-файлов полностью подходит scss-файлам
+
+переменные в .scss:
+
+$primaryColor: rgb(66, 48, 48);
+$primaryFontFamily: Roboto, sans-serif;
+$secondaryColor: rgb(66, 48, 48);
+
+header {
+    background-color: $primaryColor;
+    font-family: $primaryFontFamily;
+    color: $secondaryColor;
+}
+
+доп возможности в .scss:
+(свойство border-radius распространяется на все img в родителе с class="card",
+свойство font-size распространяется на все h3 в родителе с class="card" b и т.д.):
+
+.card {
+    background-color: $primaryColor;
+
+    img {
+        border-radius: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    div {
+        color: aqua;
+        h4 {
+            color: red;
+        }
+    }
+
+    &-button { /*.card-button*/
+        color: blue;
+
+        &:hover { /*.card-button:hover*/
+            color: green;
+        }
+    }
+
+    &-h2/* в css-файле будет отображаться как .card-h2*/ {
+        color: aqua; при смене названия класса родителя меняется и класс его детей(.card-.product = .card-h2-.product-h2 )
+        
+        &-bottom {  /*в css-файле будет отображаться как .card-h2-bottom */
+            color: red;
+        }
+    }
+}
+
+мы можем менять уже заданные значения переменных в селекторах: 
+.card {
+    $primaryColor: green;
+    background-color: $primaryColor; 
+}
+
+миксины:
+@mixin fontSizeAndLineHeight {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h2 {
+    color: blue;
+    @include fontSizeAndLineHeight;
+}
+
+/*гибкие миксины:*/
+@mixin fontSizeAndLineHeight($fs, $lh) {
+    font-size: $fs;
+    line-height: $lh;
+}
+
+h2 {
+    color: blue;
+    @include fontSizeAndLineHeight(20px, 30px);
+}
+
+h2 {
+    color: green;
+    @include fontSizeAndLineHeight(30px, 50px);
+}
+
+
+13-47:28
