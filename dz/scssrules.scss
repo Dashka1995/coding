@@ -1,20 +1,26 @@
-скачать пакет SASS(для комплиляции):
-прописать в любом терминале(при наличии node.js):
-npm install -g sass
+// скачать пакет SASS(для комплиляции):
+// прописать в любом терминале(при наличии node.js):
+// npm install -g sass
 
-создаем scss-файл(style.scss)
-компиляция (в терминале):
-sass style.scss style.css
-    или
-в проэкте создаем папку c scss-файлами "scss"
-компиляция (в терминале):
-sass scss:css 
-    или(чтобы не прописывать при каждом сохранении в терминале sass scss:css )
-sass --watch scss:css
+// создаем scss-файл(style.scss)
+// компиляция (в терминале):
+// sass style.scss style.css
+//     или
+// в проэкте создаем папку c scss-файлами "scss"
+// компиляция (в терминале):
+// sass scss:css 
+//     или(чтобы не прописывать при каждом сохранении в терминале sass scss:css )
+// sass --watch scss:css
 
-синтаксис css-файлов полностью подходит scss-файлам
+// чтобы cscc-файлы не дублировались в css-формате, название начинаем с нижнего подчеркивания_: _variables.scss(файл для переменных); _mixins.scss(файл для миксинов)
+// для подключения нужных scss-модулей к scss-файлу добавляем в начале кода файла @use 'variables'; @use 'mixins'; (использовать @import ''; можно, но не стоит из-за риска дальнейших конфликтов имен ) +
+// + или прописываем название модуля (с точкой в конце названия модуля) перед переменной или миксином: color: variables.$primaryColor;
+// или переименовываем модуль при его добавлении: @use 'variables' as vars; + прописываем новое название модуля с точкой в конце перед переменной(или миксином): color: vars.$primaryColor; 
+// или! (при повторении названий переменных в разных модулях может вызвать конфликт имен) переименовываем модуль при его добавлении на *: @use 'variables' as *;(= @import 'variables';) (возьми всё содержимое данного модуля и дай его наружу) тогда ничего перед переменными(или миксинами) дописывать не нужно, всё и так будет работать, но есть нюанс.
 
-переменные в .scss:
+// синтаксис css-файлов полностью подходит scss-файлам.
+
+// переменные в .scss:
 
 $primaryColor: rgb(66, 48, 48);
 $primaryFontFamily: Roboto, sans-serif;
@@ -26,9 +32,9 @@ header {
     color: $secondaryColor;
 }
 
-доп возможности в .scss:
-(свойство border-radius распространяется на все img в родителе с class="card",
-свойство font-size распространяется на все h3 в родителе с class="card" b и т.д.):
+// доп возможности в .scss:
+// (свойство border-radius распространяется на все img в родителе с class="card",
+// свойство font-size распространяется на все h3 в родителе с class="card" b и т.д.):
 
 .card {
     background-color: $primaryColor;
@@ -57,7 +63,7 @@ header {
     }
 
     &-h2/* в css-файле будет отображаться как .card-h2*/ {
-        color: aqua; при смене названия класса родителя меняется и класс его детей(.card-.product = .card-h2-.product-h2 )
+        color: aqua; /*при смене названия класса родителя меняется и класс его детей(.card-.product = .card-h2-.product-h2 )*/
         
         &-bottom {  /*в css-файле будет отображаться как .card-h2-bottom */
             color: red;
@@ -65,13 +71,13 @@ header {
     }
 }
 
-мы можем менять уже заданные значения переменных в селекторах: 
+// мы можем менять уже заданные значения переменных в селекторах: 
 .card {
     $primaryColor: green;
     background-color: $primaryColor; 
 }
 
-миксины:
+// миксины:
 @mixin fontSizeAndLineHeight {
     font-size: 18px;
     line-height: 20px;
@@ -82,8 +88,8 @@ h2 {
     @include fontSizeAndLineHeight;
 }
 
-/*гибкие миксины:*/
-@mixin fontSizeAndLineHeight($fs, $lh) {
+// гибкие миксины:
+@mixin fontSizeAndLineHeight($fs, $lh) {  /*в тех случаях, когда мы не задаем дефолтные значения переменным в миксине ($fs, $lh), мы обязаны прописывать значения в скобках, когда даем это scss-свойство селекторам*/
     font-size: $fs;
     line-height: $lh;
 }
@@ -99,4 +105,268 @@ h2 {
 }
 
 
-13-47:28
+@mixin fontSizeAndLineHeight($fs, $lh: 100px) {  /*в тех случаях, когда мы указали дефолтные значения переменным в миксине ($fs, $lh), при добавлении этого scss-свойства селекторам будут применятся эти дефолтные значения, если мы не подставим в скобках другие значения*/
+    font-size: $fs;
+    line-height: $lh;
+}
+
+h2 {
+    color: blue;
+    @include fontSizeAndLineHeight(30px); /*font-size: 30px; line-height: 100px;*/
+}
+
+h2 {
+    color: green;
+    @include fontSizeAndLineHeight(40px, 80px); /*font-size: 40px; line-height: 80px;*/
+}
+
+// миксин для фоновых картинок:
+@mixin backgroundImg($url) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: gray;
+    background-image: url("#{$url}");  /*чтобы внутри строки вставить значение переменной, используем интерполяцию:  ("#{../../img.png}") */
+}
+
+div {
+    @include backgroundImg('../../img2.png');
+}
+
+// миксин для марджинов:
+@mixin mx($value: 20px) { /*маржины по оси x*/
+    margin-left: $value;
+    margin-right: $value;
+}
+
+@mixin my($value: 20px) { /*маржины по оси y*/
+    margin-top: $value;
+    margin-bottom: $value;
+}
+
+@mixin margin($value) { /*общий маржин, в миксинах мы можем использовать другие миксины*/
+    @include mx($value);
+    @include my($value);
+}
+
+
+div {
+    @include margin(40px);
+}
+
+
+// миксин для центрирования позишна:
+@mixin posAbsCent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div {
+    @include posAbsCent;
+}
+
+// миксин позишн, занимающий всю высоту родителя
+@mixin fillParent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+div {
+    @include fillParent;
+}
+
+// миксины работают и с общими переменными:
+@mixin bgColor($color: green) {
+    background-color: $color; /*по дефолту цвет зеленый*/
+}
+
+div {
+    @include bgColor($primaryColor); /*дефолтное значение данного миксина заменено на значение общей переменной $primaryColor*/
+}
+
+// еще один пример интерполяции:
+@mixin border($where) {
+    border-#{$where}: 2px solid $secondaryColor; 
+}
+
+div {
+    @include border(top);
+    @include border(left);
+}
+
+// использование extend (редко где применимо, ибо раздувает css-файл):
+%yellow {
+    background-color: yellow;
+    border-color: yellow;
+}
+
+div.top-cont {
+    margin-top: 20px;
+    @extend %yellow;
+}
+
+a.drop-down-a {
+    color: blue;
+    @extend %yellow;
+}
+
+a.left-menu-a {
+    color: aqua;
+    @extend %yellow;
+}
+// в css-файле мы получим такой набор селекторов и их свойств:
+div.top-cont, a.drop-down-a, a.left-menu-a {
+    background-color: yellow;
+    border-color: yellow; 
+}
+
+div.top-cont {
+    margin-top: 20px;
+}
+
+a.drop-down-a {
+    color: blue;
+}
+
+a.left-menu-a {
+    color: aqua;
+}
+
+
+
+// переменные-коэфициенты в scss:
+$-bigK: 1.5; /*приватная!(пишется через дефиз, модуль не делится своими приватными переменными при подключении его к другим файлам) переменная-коэффициет умножения(шага) для фонтсайза*/
+$-smallK: 0.5;
+
+$baseFontSize: 20px;
+$bigFontSize: $baseFontSize * $-bigK; /*20px * 1.5 - в scss при обычных доступных арифметических действиях с абсолютными величинами не нужно писать calc(), исключение - работа с процентами и абсолютными величинами в одном действии, что scss посчитать не может, но моет css, например- left: calc(50% - 200px)*/
+$smallFontSize: $baseFontSize * $-smallK; /*20px * 0.5 */
+$smallFontSize: ($baseFontSize / $-bigK); /*20px / 1.5 - в scss деление записывается в скобках()**/
+
+// далее в основном scss-файле пишем:
+@use 'variables' as vars;
+
+h1 {
+    font-size: vars.$bigFontSize;
+}
+
+h2 {
+    font-size: vars.$baseFontSize;
+}
+
+h3 {
+    font-size: vars.$smallFontSize;
+}
+
+// доп операторы в sass(см на сайте sass):
+
+// пакет математики:
+@use 'sass:math';
+
+h1 {
+    left: math.div(100px, 2);/*=50px (100px / 2)*/
+}
+
+// циклы и пакет лист - перечень каких то значений: 
+$sizes: 600px, 50px, 200px, 400px;
+
+@each $size in $sizes {
+    .ololo-#{$size} {
+        font-size: $size;
+    }
+}
+// и в css-файле мы получим: 
+.ololo-600px {
+    font-size: 600px;
+}
+
+.ololo-50px {
+    font-size: 50px;
+}
+
+.ololo-200px {
+    font-size: 200px;
+}
+
+.ololo-400px {
+    font-size: 400px;
+}
+
+// циклы и миксин: 
+@mixin font($fs) {
+    @if $fs > 20 {
+        font-size: $fs;
+    }   
+        @else if $fs > 10 {
+        font-size: 50px;
+    }
+        @else {
+        font-size: 100px;
+    }
+}
+
+h1 {
+    color: aqua;
+    @include font(30px)
+}
+
+h2 {
+    color: black;
+    @include font(20px)
+}
+// и в css-файле мы получим: 
+h1 {
+    color: aqua;
+    font-size: 30px;
+}
+
+h2 {
+    color: black;
+    font-size: 50px; /*- сработало условие @else if $fs > 10, потому что 20px не больше значения, прописанного в условии @if $fs > 20. Для того, чтобы сработало первое условие @if, можно добавить в него знак= - @if $fs > = 20 */
+}
+
+// создание хей пойми чего хер знает нахуя.. (какие то мапы)
+
+$icons: (
+    valera './images/valera.png' grey,
+    natasha './images/natasha.png' pink,
+    volodya './images/volodya.png' darkgrey,
+);
+
+@each $name, $url, $color in $icons {
+    .icon-#{$name} {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("#{$url}");
+        background-color: $color;
+    }
+}
+// и в css-файле пойлучаем:
+.icon-valera {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./images/valera.png");
+    background-color: grey;
+}
+
+.icon-natasha {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./images/natasha.png");
+    background-color: pink;
+}
+
+.icon-volodya {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./images/volodya.png");
+    background-color: darkgrey;
+}
+
+
+// 13-1:11:28
