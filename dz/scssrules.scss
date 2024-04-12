@@ -180,6 +180,21 @@ div {
     @include fillParent;
 }
 
+// миксины + математика (делать подсчеты в миксине можно, но нежелательно, лучше для этого вместо миксина использовать функцию): 
+@mixin font($fs) {
+    font-size: $fs;
+    line-height: $fs * 1.2;
+}
+
+h1 {
+    @include font(22px);
+}
+// и в css-файле пойлучаем:
+h1 {
+    font-size: 22px;
+    line-height: 26.4px;
+}
+
 // миксины работают и с общими переменными:
 @mixin bgColor($color: green) {
     background-color: $color; /*по дефолту цвет зеленый*/
@@ -368,5 +383,169 @@ $icons: (
     background-color: darkgrey;
 }
 
+@for $i from 1 through 5 {
+    .icon-#{$i} {
+        margin-right: $i * 10px;
+    }
+}
+// и в css-файле пойлучаем:
+.icon-1 {
+    margin-right: 10px;
+}
 
-// 13-1:11:28
+.icon-2 {
+    margin-right: 20px;
+}
+
+.icon-3 {
+    margin-right: 30px;
+}
+
+.icon-4 {
+    margin-right: 40px;
+}
+
+.icon-5 {
+    margin-right: 50px;
+}
+
+// функции:
+// (сначала создадим переменную для коэфициента для подсчета лайнхейта: 
+$kLH: 1.5; 
+
+@function calkLineHeight($value) {
+    @return $value * $kLH;
+}
+
+@mixin font($fs) {
+    font-size: $fs;
+    line-height: calkLineHeight($fs);
+}
+
+h1 {
+    @include font(25px);
+}
+// и в css-файле пойлучаем:
+h1 {
+    font-size: 25px;
+    line-height: 37.5px;
+}
+// можно до бесконечности усложнять функции, например:
+@function calkLineHeight($value) {
+    @if $value > 20px{
+        @return $value * 100;
+    }
+    @return $value * $kLH;
+}
+@mixin font($fs) {
+    font-size: $fs;
+    line-height: calkLineHeight($fs);
+}
+// тогда при $fs > 20px получаем:
+h1 {
+    @include font(25px);
+}
+// и в css-файле пойлучаем:
+h1 {
+    font-size: 19px;
+    line-height: 2500px;
+}
+// тогда при $fs < 20px получаем:
+h1 {
+    @include font(25px);
+}
+// и в css-файле пойлучаем:
+h1 {
+    font-size: 19px;
+    line-height: 28.5px;
+}
+
+// дробные числа в css желательно не использовать, если при подсчетах получаются дробные числа, мы можем использовать модуль sass:math
+@use 'sass:math'; 
+
+$kLH: 1.2;
+
+@function calkLineHeight($value) {
+    @return math.floor($value * $kLH);
+}
+
+@mixin font($fs) {
+    font-size: $fs;
+    line-height: calkLineHeight($fs);
+}
+
+h1 {
+    @include font(24px);
+}
+// и в css-файле пойлучаем:
+h1 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+// мапы: 
+$light-weight: (
+    thin: 200,
+    semi-thin: 300,
+    regular: 400
+);
+
+$heavy-weight: (
+    bold: 700,
+    semi-bold: 800,
+    bold2: 900
+);
+
+h1 {
+    font-weight: map.get($heavy-weight, 'bold2');
+}
+
+h2 {
+    font-weight: map.get($light-weight, 'regular');
+}
+
+// и в css-файле пойлучаем:
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+// можно обЬеденять разные мапы в одну общую: 
+$light-weight: (
+    thin: 200,
+    semi-thin: 300,
+    regular: 400
+);
+
+$heavy-weight: (
+    bold: 700,
+    semi-bold: 800,
+    bold2: 900
+);
+
+$weight: map.merge($light-weight, $heavy-weight)
+
+h1 {
+    font-weight: map.get($weight, 'bold2'); /*можно обращаться и к общей мапе, и к конкретной $heavy-weight*/
+}
+
+h2 {
+    font-weight: map.get($weight, 'regular');
+}
+
+// и в css-файле пойлучаем:
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+
+
+
+// 15-0:37:28
